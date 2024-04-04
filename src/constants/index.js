@@ -12,7 +12,8 @@ import {
     docker,
     go,
     starbucks,
-    hyperledger
+    hyperledger,
+    duth, circuits_integrated, market, freelance, postman, bashImg, bootstrap
 } from "../tech";
 import {XCircleIcon} from "@heroicons/react/16/solid";
 
@@ -51,6 +52,9 @@ const technologies = [
     {
         name: "Tailwind CSS",
         icon: tailwind,
+    },{
+        name: 'Bootstrap',
+        icon:bootstrap
     },
     {
         name: "Node JS",
@@ -60,7 +64,10 @@ const technologies = [
         name: "MongoDB",
         icon: mongodb,
     },
-
+    {
+        name:'Hyperledger',
+        icon:hyperledger
+    },
     {
         name: "Git",
         icon: git,
@@ -71,62 +78,78 @@ const technologies = [
         icon: docker,
     },
     {
-        name:'Hyperledger',
-        icon:hyperledger
+        name:'Postman',
+        icon: postman
+    },
+    {
+        name:'Bash',
+        icon: bashImg
     }
+
 ];
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "Bachelor's In Electrical and Computer Engineering",
+        company_name: "Democritus University of Thrace, Greece",
+        icon: duth,
+        iconBg: "white",
+        date: "Oct 2015 - Oct 2019",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: go,
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        title: "Electrical and Computer Engineering Intern",
+        company_name: 'Circuits Integrated Athens,Greece',
+        icon: circuits_integrated,
+        iconBg: "white",
+        extraT:'rounded-full',
+        date: "Jun 2019 - Aug 2019",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed expertise in integrated circuits including Operational Amplifiers, Differential Amplifiers, Low Dropout\n" +
+            "Linear Regulators, and Digital CMOS Circuits such as gates and decoders.",
+            'Practical experience in developing web applications using React and Node.js.',
+            "Responsible for the development of a comprehensive\n" +
+            "full-stack application designed to facilitate onboarding\n" +
+            "for new hires and accelerate their assimilation into\n" +
+            "company processes and materials."
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: javascript,
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
+        title: "Master's in Electrical and Computer Engineering",
+        company_name: 'Democritus University of Thrace, Greece',
+        icon: duth,
+        iconBg: "white ",
+        date: "Nov 2019 - Apr 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Thesis topic: Development of a traceability app on Hyperledger Fabric",
+        ],
+    },
+    {
+        title: "Full Stack Developer",
+        company_name: "Marché Quatre Coins",
+        icon: market,
+        iconBg: "white",
+        date: "Jan 2023 - Dec 2023",
+        points: [
+            "Developed a worker-focused Full Stack application for\n" +
+            "streamlined order management, achieving a notable 50%\n" +
+            "reduction in ordering times and workload.",
+            "Led the design and implementation of user-centric\n" +
+            "features tailored speciﬁcally for workers, enhancing\n" +
+            "productivity and facilitating seamless order processing.",
+            "Implemented strategic optimizations within the application resulting in a substantial 20% increase in sales, highlighting the direct impact on operational efficiency and revenue generation."
         ],
     },
     {
         title: "Full stack Developer",
-        company_name: "Meta",
-        icon: typescript,
+        company_name: "Freelance",
+        icon: freelance,
         iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
+        date: "Jan 2024 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+
         ],
     },
 ];

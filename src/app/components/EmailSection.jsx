@@ -81,14 +81,13 @@ const EmailSection = () => {
                 <p className="text-[#ADB7BE] mb-4 max-w-md">
                     {" "}
                     I&apos;m currently looking for new opportunities, my inbox is always
-                    open. Whether you have a question or just want to say hi, I&apos;ll
-                    try my best to get back to you!
+                    open. I&apos;l get back to you as soon as possible!
                 </p>
                 <div className="socials flex flex-row gap-2">
-                    <Link href="github.com">
+                    <Link href="https://github.com/dimiderv" target="_blank">
                         <Image src={GithubIcon} alt="Github Icon" />
                     </Link>
-                    <Link href="linkedin.com">
+                    <Link href="https://www.linkedin.com/in/dejvi-dervishi-5a08ba13a/" target="_blank">
                         <Image src={LinkedinIcon} alt="Linkedin Icon" />
                     </Link>
                 </div>
@@ -110,7 +109,7 @@ const EmailSection = () => {
                                 value={form.email}
                                 onChange={handleChange}
                                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                                placeholder="jacob@google.com"
+                                placeholder="johndoe@google.com"
                             />
                         </div>
                         <div className="mb-6">

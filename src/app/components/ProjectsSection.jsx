@@ -8,57 +8,30 @@ import SectionWrapper from "@/hoc/SectionWrapper";
 const projectsData = [
     {
         id: 1,
-        title: "React Portfolio Website",
-        description: "Project 1 description",
-        image: "/images/projects/1.png",
+        title: "Crypto Search",
+        description: "Crypto search website using CoinGecko API",
+        image: "/images/projects/crypto-search.png",
         tag: ["All", "Web"],
         gitUrl: "/",
-        previewUrl: "/",
+        previewUrl: "https://dimiderv.github.io/crypto-app",
     },
     {
         id: 2,
-        title: "Potography Portfolio Website",
-        description: "Project 2 description",
-        image: "/images/projects/2.png",
+        title: "MovieDB",
+        description: "A MovieDB website for users to share their favorites movies.",
+        image: "/images/projects/movieDB.png",
         tag: ["All", "Web"],
         gitUrl: "/",
-        previewUrl: "/",
+        previewUrl: "https://moviedb-frontend-76tj.onrender.com/",
     },
     {
         id: 3,
-        title: "E-commerce Application",
-        description: "Project 3 description",
-        image: "/images/projects/3.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 4,
-        title: "Food Ordering Application",
-        description: "Project 4 description",
-        image: "/images/projects/4.png",
-        tag: ["All", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 5,
-        title: "React Firebase Template",
-        description: "Authentication and CRUD operations",
-        image: "/images/projects/5.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 6,
-        title: "Full-stack Roadmap",
-        description: "Project 5 description",
-        image: "/images/projects/6.png",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
+        title: "Traceability on Hyperledger Fabric ",
+        description: "Traceability in a food supply chain using Hyperledger Fabric.",
+        image: "/images/projects/traceability.png",
+        tag: ["All", "Blockchain"],
+        gitUrl: "https://github.com/dimiderv/Traceability_SupplyChain",
+        previewUrl: "https://github.com/dimiderv/Traceability_SupplyChain",
     },
 ];
 
@@ -98,8 +71,8 @@ const ProjectsSection = () => {
                 />
                 <ProjectTag
                     onClick={handleTagChange}
-                    name="Mobile"
-                    isSelected={tag === "Mobile"}
+                    name="Blockchain"
+                    isSelected={tag === "Blockchain"}
                 />
             </div>
             <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">

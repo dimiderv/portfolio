@@ -13,7 +13,13 @@ import typescript from "./typescript.png";
 import go from './Go.png'
 import starbucks from './starbucks.png'
 import hyperledger from './hyperledger.png'
-
+import duth from './duth-logo.png'
+import circuits_integrated from './circuits-integrated.png'
+import market from './market.png'
+import freelance from './freelance.png'
+import postman from  './postman.png'
+import bashImg from './bash.png'
+import bootstrap from './bootstrap.png'
 export {
     css,
     docker,
@@ -28,4 +34,11 @@ export {
     typescript,
     go,starbucks,
     hyperledger
+    ,duth,
+    circuits_integrated,
+    market,
+    freelance,
+    postman,
+    bashImg,
+    bootstrap
 };

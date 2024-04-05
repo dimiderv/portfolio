@@ -12,7 +12,7 @@ const projectsData = [
         description: "Crypto search website using CoinGecko API",
         image: "/images/projects/crypto-search.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://dimiderv.github.io/crypto-app",
         previewUrl: "https://dimiderv.github.io/crypto-app",
     },
     {
@@ -21,7 +21,7 @@ const projectsData = [
         description: "A MovieDB website for users to share their favorites movies.",
         image: "/images/projects/movieDB.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/dimiderv/MERN_MovieRatingSite/tree/reduxBranch",
         previewUrl: "https://moviedb-frontend-76tj.onrender.com/",
     },
     {

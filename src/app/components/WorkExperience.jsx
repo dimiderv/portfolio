@@ -17,8 +17,8 @@ import ExperienceCard from "@/app/components/ExperienceCard";
 const WorkExperience = () => {
     return (
         <>
-            <motion.div variants={textVariant()}>
-                <p id='experience' className={`${styles.sectionSubText} text-center`}>
+            <motion.div variants={textVariant()} id='experience'>
+                <p  className={`${styles.sectionSubText} text-center`}>
                     What have I done so far..
                 </p>
                 <h2 className={`${styles.sectionHeadText} text-center`}>

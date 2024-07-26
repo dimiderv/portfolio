@@ -20,6 +20,8 @@ import freelance from './freelance.png'
 import postman from  './postman.png'
 import bashImg from './bash.png'
 import bootstrap from './bootstrap.png'
+import seal from './seal.svg'
+
 export {
     css,
     docker,
@@ -40,5 +42,6 @@ export {
     freelance,
     postman,
     bashImg,
-    bootstrap
+    bootstrap,
+    seal
 };

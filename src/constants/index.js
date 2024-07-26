@@ -13,7 +13,7 @@ import {
     go,
     starbucks,
     hyperledger,
-    duth, circuits_integrated, market, freelance, postman, bashImg, bootstrap
+    duth, circuits_integrated, market, freelance, postman, bashImg, bootstrap, seal
 } from "../tech";
 import {XCircleIcon} from "@heroicons/react/16/solid";
 
@@ -90,30 +90,40 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Bachelor's In Electrical and Computer Engineering",
-        company_name: "Democritus University of Thrace, Greece",
-        icon: duth,
-        iconBg: "white",
-        date: "Oct 2015 - Oct 2019",
+        title: "Software Developer",
+        company_name: "Security Alliance",
+        icon: seal,
+        iconBg: "#E6DEDD",
+        date: "June 2024 - Present",
+        points: [
+
+        ],
+    },
+    ,
+    {
+        title: "Full stack Developer",
+        company_name: "Freelance",
+        icon: freelance,
+        iconBg: "#E6DEDD",
+        date: "Jan 2024 - Present",
         points: [
 
         ],
     },
     {
-        title: "Electrical and Computer Engineering Intern",
-        company_name: 'Circuits Integrated Athens,Greece',
-        icon: circuits_integrated,
+        title: "Full Stack Developer",
+        company_name: "Marché Quatre Coins",
+        icon: market,
         iconBg: "white",
-        extraT:'rounded-full',
-        date: "Jun 2019 - Aug 2019",
+        date: "Jan 2023 - Dec 2023",
         points: [
-            "Developed expertise in integrated circuits including Operational Amplifiers, Differential Amplifiers, Low Dropout\n" +
-            "Linear Regulators, and Digital CMOS Circuits such as gates and decoders.",
-            'Practical experience in developing web applications using React and Node.js.',
-            "Responsible for the development of a comprehensive\n" +
-            "full-stack application designed to facilitate onboarding\n" +
-            "for new hires and accelerate their assimilation into\n" +
-            "company processes and materials."
+            "Implemented strategic optimizations within the application resulting in a substantial 20% increase in sales, highlighting the direct impact on operational efficiency and revenue generation.",
+            "Led the design and implementation of user-centric\n" +
+            "features tailored speciﬁcally for workers, enhancing\n" +
+            "productivity and facilitating seamless order processing.",
+            "Developed a worker-focused Full Stack application for\n" +
+            "streamlined order management, achieving a notable 50%\n" +
+            "reduction in ordering times and workload."
         ],
     },
     {
@@ -127,27 +137,28 @@ const experiences = [
         ],
     },
     {
-        title: "Full Stack Developer",
-        company_name: "Marché Quatre Coins",
-        icon: market,
+        title: "Electrical and Computer Engineering Intern",
+        company_name: 'Circuits Integrated Athens,Greece',
+        icon: circuits_integrated,
         iconBg: "white",
-        date: "Jan 2023 - Dec 2023",
+        extraT:'rounded-full',
+        date: "Jun 2019 - Aug 2019",
         points: [
-            "Developed a worker-focused Full Stack application for\n" +
-            "streamlined order management, achieving a notable 50%\n" +
-            "reduction in ordering times and workload.",
-            "Led the design and implementation of user-centric\n" +
-            "features tailored speciﬁcally for workers, enhancing\n" +
-            "productivity and facilitating seamless order processing.",
-            "Implemented strategic optimizations within the application resulting in a substantial 20% increase in sales, highlighting the direct impact on operational efficiency and revenue generation."
+            "Responsible for the development of a comprehensive\n" +
+            "full-stack application designed to facilitate onboarding\n" +
+            "for new hires and accelerate their assimilation into\n" +
+            "company processes and materials.",
+            'Practical experience in developing web applications using React and Node.js.',
+            "Developed expertise in integrated circuits including Operational Amplifiers, Differential Amplifiers, Low Dropout\n" +
+            "Linear Regulators, and Digital CMOS Circuits such as gates and decoders."
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Freelance",
-        icon: freelance,
-        iconBg: "#E6DEDD",
-        date: "Jan 2024 - Present",
+        title: "Bachelor's In Electrical and Computer Engineering",
+        company_name: "Democritus University of Thrace, Greece",
+        icon: duth,
+        iconBg: "white",
+        date: "Oct 2015 - Oct 2019",
         points: [
 
         ],

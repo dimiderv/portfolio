@@ -96,7 +96,9 @@ const experiences = [
         iconBg: "#E6DEDD",
         date: "June 2024 - Present",
         points: [
-
+            "Designed logos and website layouts using Figma and Canva.",
+            "Developed and maintained responsive websites with Next.js, React, Tailwind CSS, and TypeScript.",
+            "Currently expanding knowledge in cybersecurity, focusing on report analysis and security best practices."
         ],
     },
     ,

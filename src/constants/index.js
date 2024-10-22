@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import {
     javascript,
     typescript,
@@ -11,16 +12,32 @@ import {
     git,
     docker,
     go,
-    starbucks,
     hyperledger,
-    duth, circuits_integrated, market, freelance, postman, bashImg, bootstrap, seal
+    duth, circuits_integrated, market, freelance, postman, bashImg, bootstrap, seal,nextjs,authjs,postgres,mysql,
+    cpp,python,c
 } from "../tech";
-import {XCircleIcon} from "@heroicons/react/16/solid";
+// import {XCircleIcon} from "@heroicons/react/16/solid";
 
 
 
+const databases = [
+    {
+        name: "MongoDB",
+        icon: mongodb,
+    },
+    {
+        name:'PostgreSQL',
+        icon:postgres
+    },
+    {
+        name:'MySQL',
+        icon:mysql
+    }
+]
 
 const technologies = [
+
+
     {
         name: "HTML 5",
         icon: html,
@@ -38,13 +55,18 @@ const technologies = [
         icon: typescript,
     },
     {
-        name: "Golang",
-        icon: go,
-    },
-    {
         name: "React JS",
         icon: reactjs,
     },
+    {
+        name:"Next.js",
+        icon:nextjs
+    },
+    {
+        name:'Auth.js',
+        icon: authjs
+    }
+    ,
     {
         name: "Redux Toolkit",
         icon: redux,
@@ -60,14 +82,28 @@ const technologies = [
         name: "Node JS",
         icon: nodejs,
     },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
-    {
+,
+    ...databases
+    ,{
         name:'Hyperledger',
         icon:hyperledger
+    }    ,
+    {
+        name: "Golang",
+        icon: go,
     },
+    {
+        name:'Python',
+        icon: python
+    },
+    // {
+    //     name: 'C',
+    //     icon: c
+    // },
+    // {
+    //     name:'C++',
+    //     icon: cpp
+    // },
     {
         name: "Git",
         icon: git,
@@ -85,6 +121,7 @@ const technologies = [
         name:'Bash',
         icon: bashImg
     }
+
 
 ];
 

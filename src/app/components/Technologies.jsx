@@ -24,17 +24,19 @@ const Technologies = () => {
                 </motion.div>
 
                 <motion.div initial={{opacity: 0}} animate={{opacity: inView ? 1 : 0}} transition={{duration: 0.5}}>
-                <div className={'flex flex-row flex-wrap justify-center gap-10 '}>
-                    {technologies.map((technology, index) => (
-                        <motion.div className={'w-28 h-28 flex  justify-center items-center'} key={technology.name}
-                                    initial={{scale: 0}} animate={{scale: inView ? 1 : 0}}
-                                    transition={{duration: 0.5, delay: inView ? index * 0.1 : 0}}>
-                            {/* Animation added to each technology */}
-                            <Image src={technology.icon} alt={technology.name} title={technology.name}/>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.div>
+                    <div className={'flex flex-row flex-wrap justify-center gap-10 '}>
+                        {technologies.map((technology, index) => (
+                            <motion.div className={`w-28 h-28 flex  justify-center items-center `} key={technology.name}
+                                        initial={{scale: 0}} animate={{scale: inView ? 1 : 0}}
+                                        transition={{duration: 0.5, delay: inView ? index * 0.1 : 0}}>
+                                {/* Animation added to each technology */}
+                                <Image src={technology.icon} alt={technology.name} title={technology.name} />
+                            </motion.div>
+                        ))}
+                    </div>
+                    
+                </motion.div>
+
         </section>
     );
 };

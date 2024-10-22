@@ -21,6 +21,14 @@ import postman from  './postman.png'
 import bashImg from './bash.png'
 import bootstrap from './bootstrap.png'
 import seal from './seal.svg'
+import nextjs from './nextjs-icon.png'
+import authjs from './authjs.png'
+import postgres from './postgres.png'
+import mysql from './mysql.png'
+import c from './c.png'
+import cpp from './cpp.png'
+import python from './python.png'
+
 
 export {
     css,
@@ -43,5 +51,11 @@ export {
     postman,
     bashImg,
     bootstrap,
-    seal
+    seal,
+    nextjs,
+    authjs,
+    postgres,
+    mysql,
+    python,
+    c,cpp
 };

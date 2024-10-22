@@ -96,9 +96,13 @@ const experiences = [
         iconBg: "#E6DEDD",
         date: "June 2024 - Present",
         points: [
-            "Designed logos and website layouts using Figma and Canva.",
-            "Developed and maintained responsive websites with Next.js, React, Tailwind CSS, and TypeScript.",
-            "Currently expanding knowledge in cybersecurity, focusing on report analysis and security best practices."
+            // "Designed logos and website layouts using Figma and Canva.",
+            // "Developed and maintained responsive websites with Next.js, React, Tailwind CSS, and TypeScript.",
+            // "Currently expanding knowledge in cybersecurity, focusing on report analysis and security best practices."
+            "Architected a Next.js/React CMS, streamlining content management for Security Alliance's web platform.",
+            "Designed and developed a responsive, SEO-optimized website interface using Figma and Tailwind CSS."
+,"Implemented Auth.js for authentication and authorization."
+,"Built a scalable backend infrastructure using TypeScript and MongoDB, enhancing system performance."
         ],
     },
     ,
@@ -114,7 +118,7 @@ const experiences = [
     },
     {
         title: "Full Stack Developer",
-        company_name: "Marché Quatre Coins",
+        company_name: "Quatre Coins",
         icon: market,
         iconBg: "white",
         date: "Jan 2023 - Dec 2023",

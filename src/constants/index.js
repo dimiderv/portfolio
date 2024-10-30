@@ -160,13 +160,18 @@ const experiences = [
         iconBg: "white",
         date: "Jan 2023 - Dec 2023",
         points: [
-            "Implemented strategic optimizations within the application resulting in a substantial 20% increase in sales, highlighting the direct impact on operational efficiency and revenue generation.",
-            "Led the design and implementation of user-centric\n" +
-            "features tailored speciﬁcally for workers, enhancing\n" +
-            "productivity and facilitating seamless order processing.",
-            "Developed a worker-focused Full Stack application for\n" +
-            "streamlined order management, achieving a notable 50%\n" +
-            "reduction in ordering times and workload."
+            // "Implemented strategic optimizations within the application resulting in a substantial 20% increase in sales, highlighting the direct impact on operational efficiency and revenue generation.",
+            // "Led the design and implementation of user-centric\n" +
+            // "features tailored speciﬁcally for workers, enhancing\n" +
+            // "productivity and facilitating seamless order processing.",
+            // "Developed a worker-focused Full Stack application for\n" +
+            // "streamlined order management, achieving a notable 50%\n" +
+            // "reduction in ordering times and workload."
+
+            "Developed a Full Stack application for order management, reducing ordering times and workload by 30%.",
+            "Developed an automated order reminder system.",
+            "Created a searchable database of previous orders, enhancing user experience and order accuracy."
+
         ],
     },
     {

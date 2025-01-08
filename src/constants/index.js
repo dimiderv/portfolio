@@ -14,7 +14,8 @@ import {
     go,
     hyperledger,
     duth, circuits_integrated, market, freelance, postman, bashImg, bootstrap, seal,nextjs,authjs,postgres,mysql,
-    cpp,python,c
+    cpp,python,c, addad,
+    supabase
 } from "../tech";
 // import {XCircleIcon} from "@heroicons/react/16/solid";
 
@@ -82,6 +83,10 @@ const technologies = [
         name: "Node JS",
         icon: nodejs,
     },
+    {
+        name:'Supabase',
+        icon:supabase
+    }
 ,
     ...databases
     ,{
@@ -125,7 +130,16 @@ const technologies = [
 
 ];
 
-const experiences = [
+const experiences = [{
+    title:"Full Stack Developer", 
+    company_name:"Addad Media", 
+    icon:addad,
+    iconBg: "#E6DEDD",
+    date: "Nov 2024 - Present",
+    points:[
+        "Developing a full-stack campaign management platform using Next.js and Supabase."
+    ]
+},
     {
         title: "Software Developer",
         company_name: "Security Alliance",

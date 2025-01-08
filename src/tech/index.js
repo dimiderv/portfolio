@@ -28,8 +28,8 @@ import mysql from './mysql.png'
 import c from './c.png'
 import cpp from './cpp.png'
 import python from './python.png'
-
-
+import addad from './addad.png'
+import supabase  from './supabase.png'
 export {
     css,
     docker,
@@ -57,5 +57,9 @@ export {
     postgres,
     mysql,
     python,
-    c,cpp
+    c,
+    cpp,
+    addad,
+    supabase
+
 };

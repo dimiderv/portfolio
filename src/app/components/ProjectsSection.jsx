@@ -8,15 +8,24 @@ import SectionWrapper from "@/hoc/SectionWrapper";
 const projectsData = [
     {
         id: 1,
+        title: "Security Alliance",
+        description: "Security Alliance website",
+        image: "/images/projects/security-alliance.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://securityalliance.org/#",
+        previewUrl: "https://securityalliance.org/#",
+    },
+    {
+        id: 2,
         title: "Crypto Search",
         description: "Crypto search website using CoinGecko API",
-        image: "/images/projects/crypto-search.png",
+        image: "/images/projects/crypto-search3.png",
         tag: ["All", "Web"],
         gitUrl: "https://dimiderv.github.io/crypto-app",
         previewUrl: "https://dimiderv.github.io/crypto-app",
     },
     {
-        id: 2,
+        id: 3,
         title: "MovieDB",
         description: "A MovieDB website for users to share their favorites movies.",
         image: "/images/projects/movieDB.png",
@@ -25,7 +34,7 @@ const projectsData = [
         previewUrl: "https://moviedb-frontend-76tj.onrender.com/",
     },
     {
-        id: 3,
+        id: 4,
         title: "Traceability on Hyperledger Fabric ",
         description: "Traceability in a food supply chain using Hyperledger Fabric.",
         image: "/images/projects/traceability.png",
@@ -75,7 +84,7 @@ const ProjectsSection = () => {
                     isSelected={tag === "Blockchain"}
                 />
             </div>
-            <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                 {filteredProjects.map((project, index) => (
                     <motion.li
                         key={index}

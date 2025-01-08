@@ -4,11 +4,16 @@ import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
     return (
-        <div>
+    <div className="mt-8 md:mt-3">
+
+        <div
+            className="h-52 md:h-72  rounded-t-xl relative group "
+        >
             <div
-                className="h-52 md:h-72 rounded-t-xl relative group"
-                style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-            >
+                className="h-52 md:h-72 bg-cover bg-center rounded-t-lg"
+                style={{ backgroundImage: `url('${imgUrl}')` }}
+            ></div>
+
                 <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
                     <Link
                         href={gitUrl}
@@ -33,3 +38,14 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 };
 
 export default ProjectCard;
+
+/**
+ * 
+old code 
+
+        <div>
+            <div
+                className="h-52 md:h-72 rounded-t-xl relative group"
+                style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+            >
+ */

@@ -1,82 +1,40 @@
-"use client";
-import React from "react";
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import {SectionWrapper} from "@/hoc";
+import { ArrowDownIcon, ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import portrait from "../../../public/images/grad.jpeg";
+import webisoft from "@/tech/webisoft.png";
+import CompanyLogo from "./CompanyLogo";
 
-const HeroSection = () => {
-    return (
-        <section className="lg:py-16 lg:mt-4 mt-20">
-            <div className="grid grid-cols-1 sm:grid-cols-12">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-                >
-                    <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m{" "}
-            </span>
-                        <br></br>
-                        <TypeAnimation
-                            sequence={[
-                                "Dejvi",
-                                1000,
-                                "a Full Stack Developer",
-                                1000,
-                                "a Computer Engineer",
-                                1000,
-                                "a Software Engineer",
-                                1000,
-                            ]}
-                            wrapper="span"
-                            speed={50}
-                            repeat={Infinity}
-                        />
-                    </h1>
-                    <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl mr-10">
-                        I am a Computer Engineer (M.Sc) with 2+ years of experience developing Full Stack applications.
-                    </p>
-                    <div>
-                        <Link
-                            href="/#contact"
-                            className="px-6 inline-block py-3 w-80 sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
-                        >
-                            Contact Me
-                        </Link>
-                  {/*      <Link*/}
-                  {/*          href="/"*/}
-                  {/*          className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"*/}
-                  {/*      >*/}
-                  {/*<span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">*/}
-                  {/*  Download CV*/}
-                  {/*</span>*/}
-                  {/*      </Link>*/}
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="col-span-4 place-self-center mt-4 lg:mt-0"
-                >
-                    <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-                        <Image
-                            src="/images/grad.jpeg"
-                            alt="hero image"
-                            className=" rounded-full absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            width={300}
-                            height={300}
-                        />
-                    </div>
-                </motion.div>
-            </div>
-        </section>
-    );
-};
-
-
-export default SectionWrapper(HeroSection,'hero')
+export default function HeroSection() {
+  return (
+    <section id="about" aria-labelledby="intro-title" className="hero-section page-container pb-20 pt-32 sm:pb-28 sm:pt-40">
+      <div className="relative z-10 grid items-center gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
+        <div className="hero-intro min-w-0">
+          <p className="eyebrow">Hello, I’m</p>
+          <h1 id="intro-title" className="mt-4 text-5xl font-semibold leading-[1.08] tracking-tight sm:text-7xl">
+            <span className="name-gradient">Dejvi</span><br />Dervishi<span className="text-pink-300">.</span>
+          </h1>
+          <p className="mt-6 text-xl font-medium leading-relaxed text-gray-100 sm:text-2xl">
+            Full-stack developer.<br /> MSc in Electrical and Computer Engineering.
+          </p>
+          <p className="mt-4 max-w-lg text-base leading-7 text-gray-400">
+            Based in Montréal, I build web applications, payment systems, and integrations.
+            My work spans React and Next.js interfaces, Django and Node.js backends, and crypto products—from wallet checkout to transaction tracking.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" className="button-primary">Explore my work <ArrowDownIcon aria-hidden="true" className="h-4 w-4" /></a>
+            <a href="#contact" className="button-secondary">Let’s connect <ArrowUpRightIcon aria-hidden="true" className="h-4 w-4" /></a>
+          </div>
+          <div className="mt-8 inline-flex items-center gap-3 text-sm text-gray-400">
+            <CompanyLogo src={webisoft} company="Webisoft" small />
+            <p>Currently building at <span className="text-gray-200">Webisoft</span></p>
+          </div>
+        </div>
+        <div className="portrait-scene relative mx-auto mb-4 w-full max-w-64 sm:max-w-80">
+          <div className="relative aspect-square overflow-hidden rounded-full border border-white/10 bg-[#1b1b1e] p-2.5">
+            <Image src={portrait} alt="Dejvi Dervishi" className="h-full w-full rounded-full object-cover object-top" sizes="(max-width: 639px) 256px, 320px" preload />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

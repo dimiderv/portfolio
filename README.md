@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dejvi Dervishi — Portfolio
 
-## Getting Started
+Personal portfolio at [dejvidervishi.com](https://www.dejvidervishi.com/), built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+## Run locally
 
-```bash
+Use Node.js 22 (`nvm use`), then:
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. To check a production build:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+npm run lint
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Content and structure
 
-## Learn More
+- `src/constants/index.js`: projects, selected experience, and skills.
+- `src/app/components`: page sections. Most render on the server; navigation and the contact form use browser interactions.
+- `src/app/globals.css`: shared styles, keyboard focus, anchor spacing, and reduced-motion support.
+- `src/app/layout.js` and `opengraph-image.js`: page metadata and social preview.
 
-To learn more about Next.js, take a look at the following resources:
+The contact form preserves the existing EmailJS service and template configuration through `NEXT_PUBLIC_SERVICE`, `NEXT_PUBLIC_TEMPLATE`, and `NEXT_PUBLIC_KEY`. Set these in the deployment environment as before. If they are unavailable locally, the form shows a direct-email fallback. No server email endpoint is required.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment and checks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Vercel’s GitHub integration builds deployments and serves the custom domain. Check the Vercel project settings for the connected repository, production branch, and environment configuration.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The `Check portfolio` GitHub Actions workflow runs installation, lint, and a production build on pull requests and pushes to `main`. It does not publish a deployment. Dependabot’s dependency-update workflow is separate.

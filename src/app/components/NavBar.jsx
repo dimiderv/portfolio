@@ -1,75 +1,79 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
-import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
-import logo from "../icon.png";
-import Image from "next/image";
 
-const navLinks = [
-    {
-        title: "About",
-        path: "#about",
-    },
-    {
-        title: "Experience",
-        path: "#experience",
-    },
-    {
-        title: "Projects",
-        path: "#projects",
-    },
-    {
-        title: "Contact",
-        path: "#contact",
-    },
+import { useRef, useState } from "react";
+import Image from "next/image";
+import logo from "../icon.png";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
+const links = [
+  { title: "About", href: "#about" },
+  { title: "Work", href: "#projects" },
+  { title: "Experience", href: "#experience" },
+  { title: "Contact", href: "#contact" },
 ];
 
-const Navbar = () => {
-    const [navbarOpen, setNavbarOpen] = useState(false);
-    const closeNav = ()=>{
-        setNavbarOpen(false)
-    }
-    return (
-        <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-            <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-                <Link
-                    href={"/"}
-                    className="text-2xl md:text-5xl text-white font-semibold"
-                >
-                    <Image src={logo} alt={'my logo'} width={'70'} height={50}/>
-                </Link>
-                <div className="mobile-menu block md:hidden">
-                    {!navbarOpen ? (
-                        <button
-                            onClick={() => setNavbarOpen(true)}
-                            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-                        >
-                            <Bars3Icon className="h-5 w-5" />
-                        </button>
-                    ) : (
-                        <button
-                            onClick={() => setNavbarOpen(false)}
-                            className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-                        >
-                            <XMarkIcon className="h-5 w-5" />
-                        </button>
-                    )}
-                </div>
-                <div className="menu hidden md:block md:w-auto" id="navbar">
-                    <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-                        {navLinks.map((link, index) => (
-                            <li key={index}>
-                                <NavLink href={link.path} title={link.title} closeNav={()=>{}}/>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-            {navbarOpen ? <MenuOverlay links={navLinks} closeNav={closeNav}/> : null}
-        </nav>
-    );
-};
+export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleRef = useRef(null);
 
-export default Navbar;
+  function handleEscape(event) {
+    if (event.key === "Escape" && isOpen) {
+      setIsOpen(false);
+      toggleRef.current?.focus();
+    }
+  }
+
+  function navigate(event, href) {
+    setIsOpen(false);
+    // Move keyboard focus out of the menu before its links are hidden.
+    const target = document.querySelector(href);
+    if (target) {
+      event.preventDefault();
+      target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ block: "start" });
+      window.history.replaceState(null, "", href);
+    }
+  }
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-30 border-b border-white/10 bg-[#121212]/95 backdrop-blur-sm">
+      <nav aria-label="Main navigation" className="page-container" onKeyDown={handleEscape}>
+        <div className="flex h-20 items-center justify-between gap-4">
+          <a href="#about" onClick={(event) => navigate(event, "#about")} className="text-lg font-semibold tracking-tight text-white">
+            <Image src={logo} alt="Dejvi Dervishi — home" width={62} height={62} className="brand-logo" sizes="62px" />
+          </a>
+          <ul className="hidden items-center gap-7 md:flex">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} onClick={(event) => navigate(event, link.href)} className="py-3 text-sm text-gray-300 transition-colors hover:text-purple-300">
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <button
+            ref={toggleRef}
+            type="button"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => setIsOpen((open) => !open)}
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 text-white md:hidden"
+          >
+            {isOpen ? <XMarkIcon aria-hidden="true" className="h-5 w-5" /> : <Bars3Icon aria-hidden="true" className="h-5 w-5" />}
+          </button>
+        </div>
+        <ul id="mobile-navigation" className={`${isOpen ? "flex" : "hidden"} flex-col gap-1 border-t border-white/10 pb-5 pt-3 md:hidden`}>
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={(event) => navigate(event, link.href)} className="block rounded-lg px-3 py-3 text-gray-200 hover:bg-white/5">
+                {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+}

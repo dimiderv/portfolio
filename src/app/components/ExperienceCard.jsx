@@ -1,60 +1,26 @@
-'use client'
-import {VerticalTimelineElement} from "react-vertical-timeline-component";
-import Image from "next/image";
-import React from "react";
-import { useInView } from "react-intersection-observer";
-import "react-vertical-timeline-component/style.min.css";
-export default function  ExperienceCard ({ experience })  {
-    const { ref, inView } = useInView({
-        triggerOnce: false,
-    });
-    return (
-        // <span ref={ref}>
-        <>
-        <VerticalTimelineElement
+import CompanyLogo from "./CompanyLogo";
+import TechStack from "./TechStack";
 
-            contentStyle={{
-                background: "#1d1836",
-                color: "#fff",
-
-            }}
-            contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-            date={experience.date}
-            iconStyle={{ background: experience.iconBg }}
-            icon={
-                <div  className='flex justify-center items-center w-full h-full'>
-                    <Image
-                        src={experience.icon}
-                        alt={experience.company_name}
-                        className={`w-[100%] h-[100%] object-contain rounded-full`}
-                    />
-                </div>
-            }
-            visible={inView}
-        >
-            <div  ref={ref}>
-
-                <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-                <p
-                    className='text-secondary text-[16px] font-semibold'
-                    style={{ margin: 0 }}
-                >
-                    {experience.company_name}
-                </p>
-            </div>
-
-            <ul className='mt-5 list-disc ml-5 space-y-2'>
-                {experience.points.map((point, index) => (
-                    <li
-                        key={`experience-point-${index}`}
-                        className='text-white-100 text-[14px] pl-1 tracking-wider'
-                    >
-                        {point}
-                    </li>
-                ))}
-            </ul>
-        </VerticalTimelineElement>
-         {/*// </span>*/}
-        </>
-    );
-};
+export default function ExperienceCard({ experience }) {
+  return (
+    <article className="experience-entry relative grid gap-5 border-t border-white/10 py-8 md:grid-cols-[15rem_1fr] md:gap-8">
+      <div className="flex items-start gap-4">
+        <CompanyLogo src={experience.logo} company={experience.company} />
+        <div>
+          <h3 className="text-lg font-semibold text-white">{experience.company}</h3>
+          <p className="mt-2 text-xs leading-5 text-gray-400">{experience.date}</p>
+        </div>
+      </div>
+      <div>
+        <p className="font-medium text-purple-200">
+          {experience.title}
+          {experience.employmentType && <span className="font-normal text-gray-400"> · {experience.employmentType}</span>}
+        </p>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-gray-300 marker:text-pink-300">
+          {experience.points.map((point) => <li key={point}>{point}</li>)}
+        </ul>
+        <div className="mt-5"><TechStack technologies={experience.technologies} compact /></div>
+      </div>
+    </article>
+  );
+}

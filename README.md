@@ -1,6 +1,15 @@
 # Dejvi Dervishi — Portfolio
 
-Personal portfolio at [dejvidervishi.com](https://www.dejvidervishi.com/), built with Next.js, React, and Tailwind CSS.
+My personal portfolio at [dejvidervishi.com](https://www.dejvidervishi.com/). It brings together my professional work, experience, and technical background as a full-stack developer and electrical and computer engineer based in Montréal.
+
+## Features
+
+- Selected work, including Security Alliance and a description of my internal-tool contributions at AddAd Media.
+- Professional experience and a toolkit covering frontend, backend, Web3, and development workflow.
+- Responsive layouts, company and technology logos, subtle animations, and reduced-motion support.
+- An EmailJS contact form, accessible navigation, and metadata for search engines and social sharing.
+
+Built with **Next.js 16, React 19, and Tailwind CSS 4**, and hosted on **Vercel**.
 
 ## Run locally
 
